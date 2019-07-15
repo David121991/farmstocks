@@ -18,14 +18,17 @@ public class FarmStocksTest {
     void tearDown() {
         db = null;
     }
-
+    
+    //This test insures that the database contains the correct number of supplies, 
+    //as well as that the function to display the supplies to the user works.
     @Test
     void testSupplies() {
         int numSupplies = 15;
         assertEquals(numSupplies, db.getNumSupplies());
         assertEquals(numSupplies, db.getSupplies().size());
     }
-
+    
+    //This test insures that the quantity stored for a specific item is correct.
     @Test
     void testSupplyQuantity() {
         int quantity = 50;
